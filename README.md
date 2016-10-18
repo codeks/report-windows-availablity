@@ -5,13 +5,16 @@
     Script is checking a server for downtimes above 5 min within given period of time (30 DAYS).
     It is possible to pass arguments to the script in order to change downtime interval and 
     desired searching date for another number of days. 
+    
     First argument after the script is number of days, and the second is downtime interval in minutes.
     Downtime is rounded down to MINUTES value. E.g. 6:59 will be rounded to 6 min
     If downtime took 5:59, then it is first rounded to 5 MINUTES and then checked against 
     specified downtime interval.
     In that case it would not be recorded to log, because rounded value (5) is equal 
     (but not higher) to downtime interval (5).
+    
     Script uses WMI object which is not available on w2k, so it will be usable on >= w2k3 systems!
+    
     For better readability of the report use Excel with "tab" separated entries.
 ## NOTES
     File Name      : availability_3.3.js
